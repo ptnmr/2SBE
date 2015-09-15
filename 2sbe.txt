@@ -1,0 +1,1 @@
+Este .txt foi criado através do Git Bash

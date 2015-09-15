@@ -1,1 +1,5 @@
 Este .txt foi criado através do Git Bash
+
+---
+
+Arquivo modificado na branch branch_teste

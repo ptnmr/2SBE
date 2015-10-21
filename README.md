@@ -4,7 +4,7 @@ Nome do projeto
 
 Equipe
 ------
-Paulo de Tarso Nunes da Mata Ribeiro (gerente) - ptnmr@cin.ufpe.br
+Paulo de Tarso Nunes da Mata Ribeiro (gerente) - ptnmr@cin.ufpe.br<br>
 Kennedy Bezerra da Silva Lins - kbsl@cin.ufpe.br
 
 Cliente

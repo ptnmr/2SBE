@@ -13,5 +13,5 @@ Secretaria do PPG em Ciência da Computação do CIn/UFPE (representada por Mari
 
 Descrição
 ---------
-Sistema para facilitar/agilizar o processo interno do PPG em Ciência da Computação do CIn/UFPEpara submeter pedidos de banca examinadora para defesas de dissertações de mestrado e teses de doutorado à Propesq. O foco é a interação entre aluno e o PPG através de duas interfaces: uma para submissão do pedido de banca pelo aluno e outra para o tratamento desses pedidos, pelo PPG.
+Sistema para facilitar/agilizar o processo interno do PPG em Ciência da Computação do CIn/UFPE para submeter pedidos de banca examinadora para defesas de dissertações de mestrado e teses de doutorado à Propesq. O foco é a interação entre aluno e o PPG através de duas interfaces: uma para submissão do pedido de banca pelo aluno e outra para o tratamento desses pedidos, pelo PPG.
 A ideia é que o PPG possa gerar, a partir do 2SBE, o formulário de solicitação de banca e outros documentos automaticamente, para composição do processo físico enviado à Propesq e para a defesa, em si.

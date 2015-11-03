@@ -1,0 +1,148 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Doutorandos solicitantes</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>CPF</th>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Fone</th>
+      <th>Ramal</th>
+      <th>Nome do orientador</th>
+      <th>Nome do coorientador</th>
+      <th>Departamento do coorientador</th>
+      <th>Ies coor</th>
+      <th>Area</th>
+      <th>Proj assoc</th>
+      <th>Titulo</th>
+      <th>Resumo</th>
+      <th>Pal chave</th>
+      <th>Sala</th>
+      <th>Data</th>
+      <th>Hora</th>
+      <th>Exam1</th>
+      <th>Exam1 mail</th>
+      <th>Exam1 dep</th>
+      <th>Exam1 ies</th>
+      <th>Exam1 pub</th>
+      <th>Exam2</th>
+      <th>Exam2 mail</th>
+      <th>Exam2 dep</th>
+      <th>Exam2 ies</th>
+      <th>Exam2 pub</th>
+      <th>Exam3</th>
+      <th>Exam3 mail</th>
+      <th>Exam3 dep</th>
+      <th>Exam3 ies</th>
+      <th>Exam3 pub</th>
+      <th>Exam4</th>
+      <th>Exam4 mail</th>
+      <th>Exam4 dep</th>
+      <th>Exam4 ies</th>
+      <th>Exam4 pub</th>
+      <th>Exam5</th>
+      <th>Exam5 mail</th>
+      <th>Exam5 dep</th>
+      <th>Exam5 ies</th>
+      <th>Exam5 pub</th>
+      <th>Exam6</th>
+      <th>Exam6 mail</th>
+      <th>Exam6 dep</th>
+      <th>Exam6 ies</th>
+      <th>Exam6 pub</th>
+      <th>Exam7</th>
+      <th>Exam7 mail</th>
+      <th>Exam7 dep</th>
+      <th>Exam7 ies</th>
+      <th>Exam7 pub</th>
+      <th>Sup int</th>
+      <th>Sup int mail</th>
+      <th>Sup int pub</th>
+      <th>Sup ext</th>
+      <th>Sup ext mail</th>
+      <th>Sup ext dep</th>
+      <th>Sup ext ies</th>
+      <th>Sup ext pub</th>
+      <th>Confirma</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doutorandos.each do |doutorando| %>
+      <tr>
+        <td><%= doutorando.cpf %></td>
+        <td><%= doutorando.nome %></td>
+        <td><%= doutorando.email %></td>
+        <td><%= doutorando.fone %></td>
+        <td><%= doutorando.ramal %></td>
+        <td><%= doutorando.orient %></td>
+        <td><%= doutorando.coorient %></td>
+        <td><%= doutorando.dep_coor %></td>
+        <td><%= doutorando.ies_coor %></td>
+        <td><%= doutorando.area %></td>
+        <td><%= doutorando.proj_assoc %></td>
+        <td><%= doutorando.titulo %></td>
+        <td><%= doutorando.resumo %></td>
+        <td><%= doutorando.pal_chave %></td>
+        <td><%= doutorando.sala %></td>
+        <td><%= doutorando.data %></td>
+        <td><%= doutorando.hora %></td>
+        <td><%= doutorando.exam1 %></td>
+        <td><%= doutorando.exam1_mail %></td>
+        <td><%= doutorando.exam1_dep %></td>
+        <td><%= doutorando.exam1_ies %></td>
+        <td><%= doutorando.exam1_pub %></td>
+        <td><%= doutorando.exam2 %></td>
+        <td><%= doutorando.exam2_mail %></td>
+        <td><%= doutorando.exam2_dep %></td>
+        <td><%= doutorando.exam2_ies %></td>
+        <td><%= doutorando.exam2_pub %></td>
+        <td><%= doutorando.exam3 %></td>
+        <td><%= doutorando.exam3_mail %></td>
+        <td><%= doutorando.exam3_dep %></td>
+        <td><%= doutorando.exam3_ies %></td>
+        <td><%= doutorando.exam3_pub %></td>
+        <td><%= doutorando.exam4 %></td>
+        <td><%= doutorando.exam4_mail %></td>
+        <td><%= doutorando.exam4_dep %></td>
+        <td><%= doutorando.exam4_ies %></td>
+        <td><%= doutorando.exam4_pub %></td>
+        <td><%= doutorando.exam5 %></td>
+        <td><%= doutorando.exam5_mail %></td>
+        <td><%= doutorando.exam5_dep %></td>
+        <td><%= doutorando.exam5_ies %></td>
+        <td><%= doutorando.exam5_pub %></td>
+        <td><%= doutorando.exam6 %></td>
+        <td><%= doutorando.exam6_mail %></td>
+        <td><%= doutorando.exam6_dep %></td>
+        <td><%= doutorando.exam6_ies %></td>
+        <td><%= doutorando.exam6_pub %></td>
+        <td><%= doutorando.exam7 %></td>
+        <td><%= doutorando.exam7_mail %></td>
+        <td><%= doutorando.exam7_dep %></td>
+        <td><%= doutorando.exam7_ies %></td>
+        <td><%= doutorando.exam7_pub %></td>
+        <td><%= doutorando.sup_int %></td>
+        <td><%= doutorando.sup_int_mail %></td>
+        <td><%= doutorando.sup_int_pub %></td>
+        <td><%= doutorando.sup_ext %></td>
+        <td><%= doutorando.sup_ext_mail %></td>
+        <td><%= doutorando.sup_ext_dep %></td>
+        <td><%= doutorando.sup_ext_ies %></td>
+        <td><%= doutorando.sup_ext_pub %></td>
+        <td><%= doutorando.confirma %></td>
+        <td><%= link_to 'Show', doutorando %></td>
+        <td><%= link_to 'Edit', edit_doutorando_path(doutorando) %></td>
+        <td><%= link_to 'Destroy', doutorando, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova solicitação', new_doutorando_path %>

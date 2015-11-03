@@ -6,8 +6,10 @@ gem 'autoprefixer-rails'
 
 # Heroku (apenas em produção)
 gem 'rails_12factor', group: :production
-# PostgreSQL para produção (exigido pelo Heroku)
+# PostgreSQL em produção (exigido pelo Heroku)
 gem 'pg', group: :production
+# Servidor em produção (melhor para Heroku)
+gem 'unicorn', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

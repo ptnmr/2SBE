@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Ferramenta para front-end
+# Ferramenta para layout
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 

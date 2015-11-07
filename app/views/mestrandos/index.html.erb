@@ -1,0 +1,117 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mestrandos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpf</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Fone</th>
+      <th>Ramal</th>
+      <th>Orient</th>
+      <th>Coorient</th>
+      <th>Dep coor</th>
+      <th>Ies coor</th>
+      <th>Area</th>
+      <th>Proj assoc</th>
+      <th>Titulo</th>
+      <th>Resumo</th>
+      <th>Pal chave</th>
+      <th>Sala</th>
+      <th>Data</th>
+      <th>Hora</th>
+      <th>Exam1</th>
+      <th>Exam1 mail</th>
+      <th>Exam1 dep</th>
+      <th>Exam1 ies</th>
+      <th>Exam1 pub</th>
+      <th>Exam2</th>
+      <th>Exam2 mail</th>
+      <th>Exam2 dep</th>
+      <th>Exam2 ies</th>
+      <th>Exam2 pub</th>
+      <th>Exam3</th>
+      <th>Exam3 mail</th>
+      <th>Exam3 dep</th>
+      <th>Exam3 ies</th>
+      <th>Exam3 pub</th>
+      <th>Exam4</th>
+      <th>Exam4 mail</th>
+      <th>Exam4 dep</th>
+      <th>Exam4 ies</th>
+      <th>Exam4 pub</th>
+      <th>Sup int</th>
+      <th>Sup int mail</th>
+      <th>Sup int pub</th>
+      <th>Sup ext</th>
+      <th>Sup ext mail</th>
+      <th>Sup ext dep</th>
+      <th>Sup ext ies</th>
+      <th>Sup ext pub</th>
+      <th>Confirma</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mestrandos.each do |mestrando| %>
+      <tr>
+        <td><%= mestrando.cpf %></td>
+        <td><%= mestrando.nome %></td>
+        <td><%= mestrando.email %></td>
+        <td><%= mestrando.fone %></td>
+        <td><%= mestrando.ramal %></td>
+        <td><%= mestrando.orient %></td>
+        <td><%= mestrando.coorient %></td>
+        <td><%= mestrando.dep_coor %></td>
+        <td><%= mestrando.ies_coor %></td>
+        <td><%= mestrando.area %></td>
+        <td><%= mestrando.proj_assoc %></td>
+        <td><%= mestrando.titulo %></td>
+        <td><%= mestrando.resumo %></td>
+        <td><%= mestrando.pal_chave %></td>
+        <td><%= mestrando.sala %></td>
+        <td><%= mestrando.data %></td>
+        <td><%= mestrando.hora %></td>
+        <td><%= mestrando.exam1 %></td>
+        <td><%= mestrando.exam1_mail %></td>
+        <td><%= mestrando.exam1_dep %></td>
+        <td><%= mestrando.exam1_ies %></td>
+        <td><%= mestrando.exam1_pub %></td>
+        <td><%= mestrando.exam2 %></td>
+        <td><%= mestrando.exam2_mail %></td>
+        <td><%= mestrando.exam2_dep %></td>
+        <td><%= mestrando.exam2_ies %></td>
+        <td><%= mestrando.exam2_pub %></td>
+        <td><%= mestrando.exam3 %></td>
+        <td><%= mestrando.exam3_mail %></td>
+        <td><%= mestrando.exam3_dep %></td>
+        <td><%= mestrando.exam3_ies %></td>
+        <td><%= mestrando.exam3_pub %></td>
+        <td><%= mestrando.exam4 %></td>
+        <td><%= mestrando.exam4_mail %></td>
+        <td><%= mestrando.exam4_dep %></td>
+        <td><%= mestrando.exam4_ies %></td>
+        <td><%= mestrando.exam4_pub %></td>
+        <td><%= mestrando.sup_int %></td>
+        <td><%= mestrando.sup_int_mail %></td>
+        <td><%= mestrando.sup_int_pub %></td>
+        <td><%= mestrando.sup_ext %></td>
+        <td><%= mestrando.sup_ext_mail %></td>
+        <td><%= mestrando.sup_ext_dep %></td>
+        <td><%= mestrando.sup_ext_ies %></td>
+        <td><%= mestrando.sup_ext_pub %></td>
+        <td><%= mestrando.confirma %></td>
+        <td><%= link_to 'Show', mestrando %></td>
+        <td><%= link_to 'Edit', edit_mestrando_path(mestrando) %></td>
+        <td><%= link_to 'Destroy', mestrando, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mestrando', new_mestrando_path %>

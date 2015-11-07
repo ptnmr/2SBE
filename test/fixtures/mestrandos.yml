@@ -1,0 +1,97 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpf: 1
+  nome: MyString
+  email: MyString
+  fone: MyString
+  ramal: 1
+  orient: MyString
+  coorient: MyString
+  dep_coor: MyString
+  ies_coor: MyString
+  area: MyString
+  proj_assoc: MyText
+  titulo: MyText
+  resumo: MyText
+  pal_chave: MyText
+  sala: MyString
+  data: 2015-11-07
+  hora: 2015-11-07 13:22:43
+  exam1: MyString
+  exam1_mail: MyString
+  exam1_dep: MyString
+  exam1_ies: MyString
+  exam1_pub: 1
+  exam2: MyString
+  exam2_mail: MyString
+  exam2_dep: MyString
+  exam2_ies: MyString
+  exam2_pub: 1
+  exam3: MyString
+  exam3_mail: MyString
+  exam3_dep: MyString
+  exam3_ies: MyString
+  exam3_pub: 1
+  exam4: MyString
+  exam4_mail: MyString
+  exam4_dep: MyString
+  exam4_ies: MyString
+  exam4_pub: 1
+  sup_int: MyString
+  sup_int_mail: MyString
+  sup_int_pub: 1
+  sup_ext: MyString
+  sup_ext_mail: MyString
+  sup_ext_dep: MyString
+  sup_ext_ies: MyString
+  sup_ext_pub: 1
+  confirma: 
+
+two:
+  cpf: 1
+  nome: MyString
+  email: MyString
+  fone: MyString
+  ramal: 1
+  orient: MyString
+  coorient: MyString
+  dep_coor: MyString
+  ies_coor: MyString
+  area: MyString
+  proj_assoc: MyText
+  titulo: MyText
+  resumo: MyText
+  pal_chave: MyText
+  sala: MyString
+  data: 2015-11-07
+  hora: 2015-11-07 13:22:43
+  exam1: MyString
+  exam1_mail: MyString
+  exam1_dep: MyString
+  exam1_ies: MyString
+  exam1_pub: 1
+  exam2: MyString
+  exam2_mail: MyString
+  exam2_dep: MyString
+  exam2_ies: MyString
+  exam2_pub: 1
+  exam3: MyString
+  exam3_mail: MyString
+  exam3_dep: MyString
+  exam3_ies: MyString
+  exam3_pub: 1
+  exam4: MyString
+  exam4_mail: MyString
+  exam4_dep: MyString
+  exam4_ies: MyString
+  exam4_pub: 1
+  sup_int: MyString
+  sup_int_mail: MyString
+  sup_int_pub: 1
+  sup_ext: MyString
+  sup_ext_mail: MyString
+  sup_ext_dep: MyString
+  sup_ext_ies: MyString
+  sup_ext_pub: 1
+  confirma: 

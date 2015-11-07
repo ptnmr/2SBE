@@ -1,0 +1,2 @@
+class MestrandoController < ApplicationController
+end

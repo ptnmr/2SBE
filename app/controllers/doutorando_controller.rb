@@ -1,0 +1,2 @@
+class DoutorandoController < ApplicationController
+end

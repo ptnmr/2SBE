@@ -46,7 +46,7 @@ class CreateMestrandos < ActiveRecord::Migration
       t.string :sup_ext_dep
       t.string :sup_ext_ies
       t.integer :sup_ext_pub
-      t.booloean :confirma
+      t.boolean :confirma
 
       t.timestamps null: false
     end

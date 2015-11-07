@@ -246,3 +246,24 @@ Processing by MestrandosController#index as HTML
   [1m[36mMestrando Load (0.4ms)[0m  [1mSELECT "mestrandos".* FROM "mestrandos"[0m
   Rendered mestrandos/index.html.erb within layouts/application (5.3ms)
 Completed 200 OK in 157ms (Views: 153.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-11-07 14:27:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mestrandos" for 150.161.2.202 at 2015-11-07 14:27:47 +0000
+Processing by MestrandosController#index as HTML
+  [1m[35mMestrando Load (0.4ms)[0m  SELECT "mestrandos".* FROM "mestrandos"
+  Rendered mestrandos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 307ms (Views: 303.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/mestrandos/new" for 150.161.2.202 at 2015-11-07 14:27:51 +0000
+Processing by MestrandosController#new as HTML
+  Rendered mestrandos/_form.html.erb (107.9ms)
+  Rendered mestrandos/new.html.erb within layouts/application (119.4ms)
+Completed 200 OK in 240ms (Views: 203.9ms | ActiveRecord: 0.6ms)

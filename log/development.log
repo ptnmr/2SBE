@@ -267,3 +267,21 @@ Processing by MestrandosController#new as HTML
   Rendered mestrandos/_form.html.erb (107.9ms)
   Rendered mestrandos/new.html.erb within layouts/application (119.4ms)
 Completed 200 OK in 240ms (Views: 203.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/doutorandos" for 150.161.2.202 at 2015-11-07 17:24:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DoutorandosController#index as HTML
+  [1m[35mDoutorando Load (0.3ms)[0m  SELECT "doutorandos".* FROM "doutorandos"
+  Rendered doutorandos/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 939ms (Views: 927.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 150.161.2.202 at 2015-11-07 17:24:06 +0000
+
+
+Started GET "/doutorandos/new" for 150.161.2.202 at 2015-11-07 17:24:09 +0000
+Processing by DoutorandosController#new as HTML
+  Rendered doutorandos/_form.html.erb (84.6ms)
+  Rendered doutorandos/new.html.erb within layouts/application (94.2ms)
+Completed 200 OK in 235ms (Views: 194.1ms | ActiveRecord: 0.5ms)

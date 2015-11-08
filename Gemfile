@@ -8,6 +8,9 @@ group :production do
   # Para o Heroku
   gem 'rails_12factor', '0.0.2'
   gem 'pg', '0.17.1'
+  
+  # Use Unicorn as the app server
+  gem 'unicorn'
 end
 
 

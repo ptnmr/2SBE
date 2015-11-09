@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :mestrandos
   resources :doutorandos
+  
+  get 'home' => 'welcome#inicio'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

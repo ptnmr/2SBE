@@ -867,3 +867,28 @@ Started GET "/home" for 150.161.2.202 at 2015-12-12 12:14:43 +0000
 Processing by WelcomeController#inicio as HTML
   Rendered welcome/inicio.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 294ms (Views: 293.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-12 18:13:42 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 42ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aluno" for 150.161.2.202 at 2015-12-12 18:14:05 +0000
+Processing by AreaAlunoController#start_aluno as HTML
+  Rendered area_aluno/start_aluno.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 314ms (Views: 312.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aluno" for 150.161.2.202 at 2015-12-12 18:14:06 +0000
+Processing by AreaAlunoController#start_aluno as HTML
+  Rendered area_aluno/start_aluno.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 203ms (Views: 202.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-12 18:14:12 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms)

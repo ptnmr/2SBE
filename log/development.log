@@ -1144,6 +1144,7 @@ Processing by WelcomeController#inicio as HTML
 Completed 200 OK in 204ms (Views: 203.7ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 150.161.2.202 at 2015-12-12 14:59:08 +0000
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by WelcomeController#inicio as HTML
@@ -1322,3 +1323,76 @@ Processing by AlunosController#index as HTML
   [1m[35mAluno Load (0.4ms)[0m  SELECT "alunos".* FROM "alunos"
   Rendered alunos/index.html.erb within layouts/application (2.6ms)
 Completed 200 OK in 222ms (Views: 220.6ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/" for 150.161.2.202 at 2015-12-12 14:59:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 798ms (Views: 783.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/area_aluno.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/area_ppg.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/doutorandos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/mestrando.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/doutorando.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/mestrandos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/scaffolds.self-d2e5ccad1506299feea3a35bfb7c525e101bb3b214303715deb675fdc539948b.css?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:33 +0000
+
+
+Started GET "/assets/area_aluno.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/assets/area_ppg.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/assets/doutorando.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/assets/doutorandos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/assets/mestrando.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/assets/mestrandos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 150.161.2.202 at 2015-12-12 14:59:34 +0000
+
+
+Started GET "/aluno" for 150.161.2.202 at 2015-12-12 14:59:40 +0000
+Processing by AreaAlunoController#start_aluno as HTML
+  Rendered area_aluno/start_aluno.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 443ms (Views: 442.5ms | ActiveRecord: 0.0ms)
+>>>>>>> d354afad09520e45af6abac788cd1c2c1d98a4df

@@ -2049,3 +2049,82 @@ Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 150.161.2.202 at 2015-12-12 17:17:37 +0000
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-12 18:20:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 604ms (Views: 589.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/%20bootstrap_and_overrides.self-e7af9023035cd89010a670681b4198c3aa2698abd68dfcb2439150c074b1eb91.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:35 +0000
+
+
+Started GET "/assets/alunos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/area_aluno.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/area_ppg.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/doutorando.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/mestrando.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/doutorandos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/mestrandos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/application.self-e0061c03a30a21707c6af8784e9be90f0cd1da9dbb1198285744836483a6f05a.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/scaffolds.self-d2e5ccad1506299feea3a35bfb7c525e101bb3b214303715deb675fdc539948b.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/alunos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/area_aluno.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/area_ppg.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/doutorando.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/doutorandos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/mestrando.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/mestrandos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 150.161.2.202 at 2015-12-12 18:20:36 +0000

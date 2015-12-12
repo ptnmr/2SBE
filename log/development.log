@@ -1091,3 +1091,54 @@ Started GET "/" for 150.161.2.202 at 2015-12-12 13:45:33 +0000
 Processing by WelcomeController#inicio as HTML
   Rendered welcome/inicio.html.erb within layouts/application (3.2ms)
 Completed 200 OK in 349ms (Views: 333.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-12 13:56:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 322ms (Views: 308.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aluno" for 150.161.2.202 at 2015-12-12 13:56:19 +0000
+Processing by AreaAlunoController#start_aluno as HTML
+  Rendered area_aluno/start_aluno.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 238ms (Views: 237.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 150.161.2.202 at 2015-12-12 14:01:36 +0000
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 240ms (Views: 239.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mestrandos" for 150.161.2.202 at 2015-12-12 14:01:41 +0000
+Processing by MestrandosController#index as HTML
+  [1m[35mMestrando Load (0.4ms)[0m  SELECT "mestrandos".* FROM "mestrandos"
+  Rendered mestrandos/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 186ms (Views: 181.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-12 14:01:44 +0000
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 158ms (Views: 157.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-12 14:16:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 344ms (Views: 329.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 150.161.2.202 at 2015-12-12 14:18:42 +0000
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 185ms (Views: 184.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-12 14:18:48 +0000
+Processing by WelcomeController#inicio as HTML
+  Rendered welcome/inicio.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 204ms (Views: 203.7ms | ActiveRecord: 0.0ms)

@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   resources :mestrandos
   resources :doutorandos
   
+  root = 'welcome#inicio'
+  
   get 'home' => 'welcome#inicio'
+  get 'aluno' => 'area_aluno#start_aluno'
+  get 'ppg' => 'area_ppg#start_ppg'
+
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

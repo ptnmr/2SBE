@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Para a autenticação de usuário
 gem 'devise'
+gem 'omniauth'
 
 # Para o layout
 gem 'bootstrap-sass', '~> 3.2.0'

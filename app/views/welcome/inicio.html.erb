@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>2SBE</title>
+<title>Sistema de Solicitação de Banca Examinadora</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -19,14 +19,12 @@
 			<div>
 				<input type="submit" value="Entrar" />
 				<a href="#">Esqueceu a senha?</a>
-				<a href="#">Cadastre-se</a>
+				<a><%= link_to "Cadastre-se", new_user_registration_path%></a>
+				<a><%= link_to "Sair", destroy_user_session_path, method: :delete %></a>
 			</div>
 		</form>
 	</section>
-
 </div>
 </body>
 </html>
-
-
 

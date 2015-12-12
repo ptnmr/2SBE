@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+
   resources :mestrandos
   resources :doutorandos
   
-  root = 'welcome#inicio'
+  root 'welcome#inicio'
   
   get 'home' => 'welcome#inicio'
   get 'aluno' => 'area_aluno#start_aluno'

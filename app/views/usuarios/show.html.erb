@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @usuario.cpf %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @usuario.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @usuario.email %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @usuario.nivel %>
+</p>
+
+<p>
+  <strong>Fone:</strong>
+  <%= @usuario.fone %>
+</p>
+
+<p>
+  <strong>Ramal:</strong>
+  <%= @usuario.ramal %>
+</p>
+
+<p>
+  <strong>Orient:</strong>
+  <%= @usuario.orient %>
+</p>
+
+<p>
+  <strong>Coorient:</strong>
+  <%= @usuario.coorient %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

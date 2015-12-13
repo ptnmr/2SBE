@@ -1,0 +1,151 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pedidos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpf</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Nivel</th>
+      <th>Fone</th>
+      <th>Ramal</th>
+      <th>Orient</th>
+      <th>Coorient</th>
+      <th>Dep coor</th>
+      <th>Ies coor</th>
+      <th>Area</th>
+      <th>Proj assoc</th>
+      <th>Titulo</th>
+      <th>Resumo</th>
+      <th>Pal chave</th>
+      <th>Sala</th>
+      <th>Data</th>
+      <th>Hora</th>
+      <th>Exam1</th>
+      <th>Exam1 mail</th>
+      <th>Exam1 dep</th>
+      <th>Exam1 ies</th>
+      <th>Exam1 pub</th>
+      <th>Exam2</th>
+      <th>Exam2 mail</th>
+      <th>Exam2 dep</th>
+      <th>Exam2 ies</th>
+      <th>Exam2 pub</th>
+      <th>Exam3</th>
+      <th>Exam3 mail</th>
+      <th>Exam3 dep</th>
+      <th>Exam3 ies</th>
+      <th>Exam3 pub</th>
+      <th>Exam4</th>
+      <th>Exam4 mail</th>
+      <th>Exam4 dep</th>
+      <th>Exam4 ies</th>
+      <th>Exam4 pub</th>
+      <th>Exam5</th>
+      <th>Exam5 mail</th>
+      <th>Exam5 dep</th>
+      <th>Exam5 ies</th>
+      <th>Exam5 pub</th>
+      <th>Exam6</th>
+      <th>Exam6 mail</th>
+      <th>Exam6 dep</th>
+      <th>Exam6 ies</th>
+      <th>Exam6 pub</th>
+      <th>Exam7</th>
+      <th>Exam7 mail</th>
+      <th>Exam7 dep</th>
+      <th>Exam7 ies</th>
+      <th>Exam7 pub</th>
+      <th>Sup int</th>
+      <th>Sup int mail</th>
+      <th>Sup int pub</th>
+      <th>Sup ext</th>
+      <th>Sup ext mail</th>
+      <th>Sup ext dep</th>
+      <th>Sup ext ies</th>
+      <th>Sup ext pub</th>
+      <th>Confirma</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pedidos.each do |pedido| %>
+      <tr>
+        <td><%= pedido.cpf %></td>
+        <td><%= pedido.nome %></td>
+        <td><%= pedido.email %></td>
+        <td><%= pedido.nivel %></td>
+        <td><%= pedido.fone %></td>
+        <td><%= pedido.ramal %></td>
+        <td><%= pedido.orient %></td>
+        <td><%= pedido.coorient %></td>
+        <td><%= pedido.dep_coor %></td>
+        <td><%= pedido.ies_coor %></td>
+        <td><%= pedido.area %></td>
+        <td><%= pedido.proj_assoc %></td>
+        <td><%= pedido.titulo %></td>
+        <td><%= pedido.resumo %></td>
+        <td><%= pedido.pal_chave %></td>
+        <td><%= pedido.sala %></td>
+        <td><%= pedido.data %></td>
+        <td><%= pedido.hora %></td>
+        <td><%= pedido.exam1 %></td>
+        <td><%= pedido.exam1_mail %></td>
+        <td><%= pedido.exam1_dep %></td>
+        <td><%= pedido.exam1_ies %></td>
+        <td><%= pedido.exam1_pub %></td>
+        <td><%= pedido.exam2 %></td>
+        <td><%= pedido.exam2_mail %></td>
+        <td><%= pedido.exam2_dep %></td>
+        <td><%= pedido.exam2_ies %></td>
+        <td><%= pedido.exam2_pub %></td>
+        <td><%= pedido.exam3 %></td>
+        <td><%= pedido.exam3_mail %></td>
+        <td><%= pedido.exam3_dep %></td>
+        <td><%= pedido.exam3_ies %></td>
+        <td><%= pedido.exam3_pub %></td>
+        <td><%= pedido.exam4 %></td>
+        <td><%= pedido.exam4_mail %></td>
+        <td><%= pedido.exam4_dep %></td>
+        <td><%= pedido.exam4_ies %></td>
+        <td><%= pedido.exam4_pub %></td>
+        <td><%= pedido.exam5 %></td>
+        <td><%= pedido.exam5_mail %></td>
+        <td><%= pedido.exam5_dep %></td>
+        <td><%= pedido.exam5_ies %></td>
+        <td><%= pedido.exam5_pub %></td>
+        <td><%= pedido.exam6 %></td>
+        <td><%= pedido.exam6_mail %></td>
+        <td><%= pedido.exam6_dep %></td>
+        <td><%= pedido.exam6_ies %></td>
+        <td><%= pedido.exam6_pub %></td>
+        <td><%= pedido.exam7 %></td>
+        <td><%= pedido.exam7_mail %></td>
+        <td><%= pedido.exam7_dep %></td>
+        <td><%= pedido.exam7_ies %></td>
+        <td><%= pedido.exam7_pub %></td>
+        <td><%= pedido.sup_int %></td>
+        <td><%= pedido.sup_int_mail %></td>
+        <td><%= pedido.sup_int_pub %></td>
+        <td><%= pedido.sup_ext %></td>
+        <td><%= pedido.sup_ext_mail %></td>
+        <td><%= pedido.sup_ext_dep %></td>
+        <td><%= pedido.sup_ext_ies %></td>
+        <td><%= pedido.sup_ext_pub %></td>
+        <td><%= pedido.confirma %></td>
+        <td><%= pedido.usuario %></td>
+        <td><%= link_to 'Show', pedido %></td>
+        <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
+        <td><%= link_to 'Destroy', pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pedido', new_pedido_path %>

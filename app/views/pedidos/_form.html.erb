@@ -1,269 +1,468 @@
-<%= form_for(@pedido) do |f| %>
-  <% if @pedido.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@pedido.errors.count, "error") %> prohibited this pedido from being saved:</h2>
+<%= form_for @pedido, :html => { :class => "form-horizontal pedido" } do |f| %>
 
-      <ul>
-      <% @pedido.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @pedido.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@pedido.errors.count, "error") %> prohibited this pedido from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @pedido.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :cpf %><br>
-    <%= f.number_field :cpf %>
-  </div>
-  <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :nivel %><br>
-    <%= f.text_field :nivel %>
-  </div>
-  <div class="field">
-    <%= f.label :fone %><br>
-    <%= f.text_field :fone %>
-  </div>
-  <div class="field">
-    <%= f.label :ramal %><br>
-    <%= f.number_field :ramal %>
-  </div>
-  <div class="field">
-    <%= f.label :orient %><br>
-    <%= f.text_field :orient %>
-  </div>
-  <div class="field">
-    <%= f.label :coorient %><br>
-    <%= f.text_field :coorient %>
-  </div>
-  <div class="field">
-    <%= f.label :dep_coor %><br>
-    <%= f.text_field :dep_coor %>
-  </div>
-  <div class="field">
-    <%= f.label :ies_coor %><br>
-    <%= f.text_field :ies_coor %>
-  </div>
-  <div class="field">
-    <%= f.label :area %><br>
-    <%= f.text_field :area %>
-  </div>
-  <div class="field">
-    <%= f.label :proj_assoc %><br>
-    <%= f.text_area :proj_assoc %>
-  </div>
-  <div class="field">
-    <%= f.label :titulo %><br>
-    <%= f.text_area :titulo %>
-  </div>
-  <div class="field">
-    <%= f.label :resumo %><br>
-    <%= f.text_area :resumo %>
-  </div>
-  <div class="field">
-    <%= f.label :pal_chave %><br>
-    <%= f.text_area :pal_chave %>
-  </div>
-  <div class="field">
-    <%= f.label :sala %><br>
-    <%= f.text_field :sala %>
-  </div>
-  <div class="field">
-    <%= f.label :data %><br>
-    <%= f.date_select :data %>
-  </div>
-  <div class="field">
-    <%= f.label :hora %><br>
-    <%= f.time_select :hora %>
-  </div>
-  <div class="field">
-    <%= f.label :exam1 %><br>
-    <%= f.text_field :exam1 %>
-  </div>
-  <div class="field">
-    <%= f.label :exam1_mail %><br>
-    <%= f.text_field :exam1_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :exam1_dep %><br>
-    <%= f.text_field :exam1_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :exam1_ies %><br>
-    <%= f.text_field :exam1_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :exam1_pub %><br>
-    <%= f.number_field :exam1_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :exam2 %><br>
-    <%= f.text_field :exam2 %>
-  </div>
-  <div class="field">
-    <%= f.label :exam2_mail %><br>
-    <%= f.text_field :exam2_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :exam2_dep %><br>
-    <%= f.text_field :exam2_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :exam2_ies %><br>
-    <%= f.text_field :exam2_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :exam2_pub %><br>
-    <%= f.number_field :exam2_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :exam3 %><br>
-    <%= f.text_field :exam3 %>
-  </div>
-  <div class="field">
-    <%= f.label :exam3_mail %><br>
-    <%= f.text_field :exam3_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :exam3_dep %><br>
-    <%= f.text_field :exam3_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :exam3_ies %><br>
-    <%= f.text_field :exam3_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :exam3_pub %><br>
-    <%= f.number_field :exam3_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :exam4 %><br>
-    <%= f.text_field :exam4 %>
-  </div>
-  <div class="field">
-    <%= f.label :exam4_mail %><br>
-    <%= f.text_field :exam4_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :exam4_dep %><br>
-    <%= f.text_field :exam4_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :exam4_ies %><br>
-    <%= f.text_field :exam4_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :exam4_pub %><br>
-    <%= f.number_field :exam4_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :exam5 %><br>
-    <%= f.text_field :exam5 %>
-  </div>
-  <div class="field">
-    <%= f.label :exam5_mail %><br>
-    <%= f.text_field :exam5_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :exam5_dep %><br>
-    <%= f.text_field :exam5_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :exam5_ies %><br>
-    <%= f.text_field :exam5_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :exam5_pub %><br>
-    <%= f.number_field :exam5_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :exam6 %><br>
-    <%= f.text_field :exam6 %>
-  </div>
-  <div class="field">
-    <%= f.label :exam6_mail %><br>
-    <%= f.text_field :exam6_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :exam6_dep %><br>
-    <%= f.text_field :exam6_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :exam6_ies %><br>
-    <%= f.text_field :exam6_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :exam6_pub %><br>
-    <%= f.number_field :exam6_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :exam7 %><br>
-    <%= f.text_field :exam7 %>
-  </div>
-  <div class="field">
-    <%= f.label :exam7_mail %><br>
-    <%= f.text_field :exam7_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :exam7_dep %><br>
-    <%= f.text_field :exam7_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :exam7_ies %><br>
-    <%= f.text_field :exam7_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :exam7_pub %><br>
-    <%= f.number_field :exam7_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_int %><br>
-    <%= f.text_field :sup_int %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_int_mail %><br>
-    <%= f.text_field :sup_int_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_int_pub %><br>
-    <%= f.number_field :sup_int_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_ext %><br>
-    <%= f.text_field :sup_ext %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_ext_mail %><br>
-    <%= f.text_field :sup_ext_mail %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_ext_dep %><br>
-    <%= f.text_field :sup_ext_dep %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_ext_ies %><br>
-    <%= f.text_field :sup_ext_ies %>
-  </div>
-  <div class="field">
-    <%= f.label :sup_ext_pub %><br>
-    <%= f.number_field :sup_ext_pub %>
-  </div>
-  <div class="field">
-    <%= f.label :confirma %><br>
-    <%= f.check_box :confirma %>
-  </div>
-  <div class="field">
-    <%= f.label :usuario_id %><br>
-    <%= f.text_field :usuario_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="form-group">
+    <%= f.label :cpf, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :cpf, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:cpf) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :nome, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :nome, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:nome) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:email) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :nivel, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :nivel, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:nivel) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :fone, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :fone, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:fone) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ramal, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :ramal, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:ramal) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :orient, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :orient, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:orient) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :coorient, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :coorient, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:coorient) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :dep_coor, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :dep_coor, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:dep_coor) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ies_coor, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :ies_coor, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:ies_coor) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :area, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :area, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:area) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :proj_assoc, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :proj_assoc, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:proj_assoc) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :titulo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :titulo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:titulo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :resumo, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :resumo, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:resumo) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :pal_chave, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :pal_chave, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:pal_chave) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sala, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sala, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sala) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :data, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :data, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:data) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hora, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :hora, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:hora) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam1, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam1, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam1) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam1_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam1_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam1_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam1_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam1_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam1_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam1_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam1_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam1_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam1_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam1_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam1_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam2, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam2, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam2) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam2_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam2_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam2_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam2_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam2_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam2_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam2_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam2_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam2_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam2_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam2_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam2_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam3, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam3, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam3) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam3_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam3_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam3_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam3_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam3_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam3_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam3_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam3_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam3_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam3_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam3_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam3_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam4, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam4, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam4) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam4_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam4_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam4_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam4_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam4_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam4_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam4_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam4_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam4_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam4_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam4_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam4_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam5, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam5, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam5) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam5_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam5_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam5_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam5_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam5_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam5_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam5_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam5_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam5_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam5_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam5_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam5_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam6, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam6, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam6) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam6_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam6_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam6_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam6_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam6_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam6_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam6_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam6_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam6_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam6_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam6_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam6_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam7, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam7, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam7) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam7_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam7_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam7_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam7_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam7_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam7_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam7_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam7_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam7_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exam7_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exam7_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exam7_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_int, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_int, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_int) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_int_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_int_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_int_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_int_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_int_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_int_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_ext, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_ext, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_ext) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_ext_mail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_ext_mail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_ext_mail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_ext_dep, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_ext_dep, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_ext_dep) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_ext_ies, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_ext_ies, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_ext_ies) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sup_ext_pub, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sup_ext_pub, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sup_ext_pub) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :confirma, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :confirma, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:confirma) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :usuario_id, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :usuario_id, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:usuario_id) %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                pedidos_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+
 <% end %>

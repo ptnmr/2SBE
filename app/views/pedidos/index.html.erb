@@ -1,80 +1,82 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Pedidos</h1>
-
-<table>
+<%- model_class = Pedido -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Cpf</th>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Nivel</th>
-      <th>Fone</th>
-      <th>Ramal</th>
-      <th>Orient</th>
-      <th>Coorient</th>
-      <th>Dep coor</th>
-      <th>Ies coor</th>
-      <th>Area</th>
-      <th>Proj assoc</th>
-      <th>Titulo</th>
-      <th>Resumo</th>
-      <th>Pal chave</th>
-      <th>Sala</th>
-      <th>Data</th>
-      <th>Hora</th>
-      <th>Exam1</th>
-      <th>Exam1 mail</th>
-      <th>Exam1 dep</th>
-      <th>Exam1 ies</th>
-      <th>Exam1 pub</th>
-      <th>Exam2</th>
-      <th>Exam2 mail</th>
-      <th>Exam2 dep</th>
-      <th>Exam2 ies</th>
-      <th>Exam2 pub</th>
-      <th>Exam3</th>
-      <th>Exam3 mail</th>
-      <th>Exam3 dep</th>
-      <th>Exam3 ies</th>
-      <th>Exam3 pub</th>
-      <th>Exam4</th>
-      <th>Exam4 mail</th>
-      <th>Exam4 dep</th>
-      <th>Exam4 ies</th>
-      <th>Exam4 pub</th>
-      <th>Exam5</th>
-      <th>Exam5 mail</th>
-      <th>Exam5 dep</th>
-      <th>Exam5 ies</th>
-      <th>Exam5 pub</th>
-      <th>Exam6</th>
-      <th>Exam6 mail</th>
-      <th>Exam6 dep</th>
-      <th>Exam6 ies</th>
-      <th>Exam6 pub</th>
-      <th>Exam7</th>
-      <th>Exam7 mail</th>
-      <th>Exam7 dep</th>
-      <th>Exam7 ies</th>
-      <th>Exam7 pub</th>
-      <th>Sup int</th>
-      <th>Sup int mail</th>
-      <th>Sup int pub</th>
-      <th>Sup ext</th>
-      <th>Sup ext mail</th>
-      <th>Sup ext dep</th>
-      <th>Sup ext ies</th>
-      <th>Sup ext pub</th>
-      <th>Confirma</th>
-      <th>Usuario</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:cpf) %></th>
+      <th><%= model_class.human_attribute_name(:nome) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:nivel) %></th>
+      <th><%= model_class.human_attribute_name(:fone) %></th>
+      <th><%= model_class.human_attribute_name(:ramal) %></th>
+      <th><%= model_class.human_attribute_name(:orient) %></th>
+      <th><%= model_class.human_attribute_name(:coorient) %></th>
+      <th><%= model_class.human_attribute_name(:dep_coor) %></th>
+      <th><%= model_class.human_attribute_name(:ies_coor) %></th>
+      <th><%= model_class.human_attribute_name(:area) %></th>
+      <th><%= model_class.human_attribute_name(:proj_assoc) %></th>
+      <th><%= model_class.human_attribute_name(:titulo) %></th>
+      <th><%= model_class.human_attribute_name(:resumo) %></th>
+      <th><%= model_class.human_attribute_name(:pal_chave) %></th>
+      <th><%= model_class.human_attribute_name(:sala) %></th>
+      <th><%= model_class.human_attribute_name(:data) %></th>
+      <th><%= model_class.human_attribute_name(:hora) %></th>
+      <th><%= model_class.human_attribute_name(:exam1) %></th>
+      <th><%= model_class.human_attribute_name(:exam1_mail) %></th>
+      <th><%= model_class.human_attribute_name(:exam1_dep) %></th>
+      <th><%= model_class.human_attribute_name(:exam1_ies) %></th>
+      <th><%= model_class.human_attribute_name(:exam1_pub) %></th>
+      <th><%= model_class.human_attribute_name(:exam2) %></th>
+      <th><%= model_class.human_attribute_name(:exam2_mail) %></th>
+      <th><%= model_class.human_attribute_name(:exam2_dep) %></th>
+      <th><%= model_class.human_attribute_name(:exam2_ies) %></th>
+      <th><%= model_class.human_attribute_name(:exam2_pub) %></th>
+      <th><%= model_class.human_attribute_name(:exam3) %></th>
+      <th><%= model_class.human_attribute_name(:exam3_mail) %></th>
+      <th><%= model_class.human_attribute_name(:exam3_dep) %></th>
+      <th><%= model_class.human_attribute_name(:exam3_ies) %></th>
+      <th><%= model_class.human_attribute_name(:exam3_pub) %></th>
+      <th><%= model_class.human_attribute_name(:exam4) %></th>
+      <th><%= model_class.human_attribute_name(:exam4_mail) %></th>
+      <th><%= model_class.human_attribute_name(:exam4_dep) %></th>
+      <th><%= model_class.human_attribute_name(:exam4_ies) %></th>
+      <th><%= model_class.human_attribute_name(:exam4_pub) %></th>
+      <th><%= model_class.human_attribute_name(:exam5) %></th>
+      <th><%= model_class.human_attribute_name(:exam5_mail) %></th>
+      <th><%= model_class.human_attribute_name(:exam5_dep) %></th>
+      <th><%= model_class.human_attribute_name(:exam5_ies) %></th>
+      <th><%= model_class.human_attribute_name(:exam5_pub) %></th>
+      <th><%= model_class.human_attribute_name(:exam6) %></th>
+      <th><%= model_class.human_attribute_name(:exam6_mail) %></th>
+      <th><%= model_class.human_attribute_name(:exam6_dep) %></th>
+      <th><%= model_class.human_attribute_name(:exam6_ies) %></th>
+      <th><%= model_class.human_attribute_name(:exam6_pub) %></th>
+      <th><%= model_class.human_attribute_name(:exam7) %></th>
+      <th><%= model_class.human_attribute_name(:exam7_mail) %></th>
+      <th><%= model_class.human_attribute_name(:exam7_dep) %></th>
+      <th><%= model_class.human_attribute_name(:exam7_ies) %></th>
+      <th><%= model_class.human_attribute_name(:exam7_pub) %></th>
+      <th><%= model_class.human_attribute_name(:sup_int) %></th>
+      <th><%= model_class.human_attribute_name(:sup_int_mail) %></th>
+      <th><%= model_class.human_attribute_name(:sup_int_pub) %></th>
+      <th><%= model_class.human_attribute_name(:sup_ext) %></th>
+      <th><%= model_class.human_attribute_name(:sup_ext_mail) %></th>
+      <th><%= model_class.human_attribute_name(:sup_ext_dep) %></th>
+      <th><%= model_class.human_attribute_name(:sup_ext_ies) %></th>
+      <th><%= model_class.human_attribute_name(:sup_ext_pub) %></th>
+      <th><%= model_class.human_attribute_name(:confirma) %></th>
+      <th><%= model_class.human_attribute_name(:usuario_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @pedidos.each do |pedido| %>
       <tr>
+        <td><%= link_to pedido.id, pedido_path(pedido) %></td>
         <td><%= pedido.cpf %></td>
         <td><%= pedido.nome %></td>
         <td><%= pedido.email %></td>
@@ -137,15 +139,22 @@
         <td><%= pedido.sup_ext_ies %></td>
         <td><%= pedido.sup_ext_pub %></td>
         <td><%= pedido.confirma %></td>
-        <td><%= pedido.usuario %></td>
-        <td><%= link_to 'Show', pedido %></td>
-        <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
-        <td><%= link_to 'Destroy', pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= pedido.usuario_id %></td>
+        <td><%=l pedido.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_pedido_path(pedido), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      pedido_path(pedido),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Pedido', new_pedido_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_pedido_path,
+            :class => 'btn btn-primary' %>

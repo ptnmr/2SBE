@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 
+# Melhor para layout - Kennedy
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+
 # Para a autenticação de usuário
 gem 'devise'
 gem 'omniauth'

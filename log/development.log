@@ -48,3 +48,120 @@ Started GET "/assets/usuarios.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b9
 
 
 Started GET "/assets/usuarios.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-13 17:20:42 +0000
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDigestToUsuarios (20151213182601)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "usuarios" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151213182601"]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+[0m
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-13 18:34:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 34ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 150.161.2.202 at 2015-12-13 18:34:08 +0000
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 331ms (Views: 261.5ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+[0m
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-13 19:31:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (4.6ms)
+Completed 200 OK in 54ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 150.161.2.202 at 2015-12-13 19:31:50 +0000
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 285ms (Views: 278.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/usuarios/new" for 150.161.2.202 at 2015-12-13 19:31:53 +0000
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (52.9ms)
+  Rendered usuarios/new.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 212ms (Views: 201.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/usuarios" for 150.161.2.202 at 2015-12-13 19:32:04 +0000
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"umQXZLaqTcXrwYItkvXR54ycKT5GeUXoCOTOFVE1Ty8+mBo5U/uaYlX/CyVdqz4MsgQmGsjx5Fr+rlcbbGyucA==", "usuario"=>{"cpf"=>"", "nome"=>"", "email"=>"", "nivel"=>"", "fone"=>"", "ramal"=>"", "orient"=>"", "coorient"=>""}, "commit"=>"Create Usuario"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.3ms)[0m  SELECT  1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered usuarios/_form.html.erb (11.4ms)
+  Rendered usuarios/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 209ms (Views: 155.0ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToUsuariosEmail (20151213194318)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151213194318"]]
+  [1m[35m (15.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-13 19:51:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (12.1ms)
+Completed 200 OK in 80ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 150.161.2.202 at 2015-12-13 19:51:12 +0000
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 282ms (Views: 275.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/usuarios/new" for 150.161.2.202 at 2015-12-13 19:51:15 +0000
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (50.2ms)
+  Rendered usuarios/new.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 215ms (Views: 203.4ms | ActiveRecord: 0.6ms)

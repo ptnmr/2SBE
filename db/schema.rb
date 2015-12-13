@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151213171505) do
+ActiveRecord::Schema.define(version: 20151213194318) do
 
   create_table "pedidos", force: :cascade do |t|
     t.integer  "cpf"
@@ -92,8 +92,11 @@ ActiveRecord::Schema.define(version: 20151213171505) do
     t.integer  "ramal"
     t.string   "orient"
     t.string   "coorient"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
+
+  add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true
 
 end

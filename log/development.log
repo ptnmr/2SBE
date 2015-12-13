@@ -3920,3 +3920,263 @@ Migrating to AddIndexToUsuariosEmail (20151213211032)
             FROM sqlite_temp_master
             WHERE name='index_usuarios_on_email' AND type='index'
 [0m
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-13 21:57:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.4ms)
+Completed 200 OK in 75ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 150.161.2.202 at 2015-12-13 21:57:49 +0000
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 4150ms (Views: 4128.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-b85ec57930a7e57658a355f494c8fca5e2691f1a1ed6bfd67ddfbf962e55a7ac.css?body=1" for 150.161.2.202 at 2015-12-13 21:57:53 +0000
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:53 +0000
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:53 +0000
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:53 +0000
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:53 +0000
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for 150.161.2.202 at 2015-12-13 21:57:54 +0000
+
+
+Started GET "/usuarios/new" for 150.161.2.202 at 2015-12-13 21:58:22 +0000
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (53.2ms)
+  Rendered usuarios/new.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 506ms (Views: 505.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 150.161.2.202 at 2015-12-13 21:59:30 +0000
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L4sLCFh5MCHhGFY5aVZgClKmfqH3FiamhiEeII1Ky/irdwZVvSjnhl8m3zGmCI/hbD5xhXmehxRwa4cusBMqpw==", "usuario"=>{"cpf"=>"99999999", "nome"=>"Fulano de Tal", "email"=>"fulano@detal.com", "nivel"=>"DO", "fone"=>"999999999", "ramal"=>"888888888", "orient"=>"siuhaeriouhar", "coorient"=>"iphdfoigpodinpo drpkl"}, "commit"=>"Criar Usuário"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.3ms)[0m  SELECT  1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('fulano@detal.com') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered usuarios/_form.html.erb (9.7ms)
+  Rendered usuarios/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 592ms (Views: 526.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/usuarios" for 150.161.2.202 at 2015-12-13 22:00:24 +0000
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZheIpzS04Z/LRuXNNdn/z+sxIXVrmbMrVmJ7Z4Rewiri64X60eU2OHV4bMX6hxAk1akuUeUREpmgKOJpuQcjdQ==", "usuario"=>{"cpf"=>"99999999", "nome"=>"Fulano de Tal", "email"=>"fulano@detal.com", "nivel"=>"DO", "fone"=>"999999999", "ramal"=>"888888888", "orient"=>"siuhaeriouhar", "coorient"=>"iphdfoigpodinpo drpkl"}, "commit"=>"Criar Usuário"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('fulano@detal.com') LIMIT 1[0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "usuarios" ("cpf", "nome", "email", "nivel", "fone", "ramal", "orient", "coorient", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["cpf", 99999999], ["nome", "Fulano de Tal"], ["email", "fulano@detal.com"], ["nivel", "DO"], ["fone", "999999999"], ["ramal", 888888888], ["orient", "siuhaeriouhar"], ["coorient", "iphdfoigpodinpo drpkl"], ["created_at", "2015-12-13 22:00:24.638752"], ["updated_at", "2015-12-13 22:00:24.638752"]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://app-2sbe-ptnmr.c9users.io/usuarios/4
+Completed 302 Found in 33ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/usuarios/4" for 150.161.2.202 at 2015-12-13 22:00:24 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered usuarios/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 328ms (Views: 308.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/usuarios" for 150.161.2.202 at 2015-12-13 22:00:37 +0000
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 311ms (Views: 310.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/usuarios/new" for 150.161.2.202 at 2015-12-13 22:00:59 +0000
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (9.1ms)
+  Rendered usuarios/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 407ms (Views: 403.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 150.161.2.202 at 2015-12-13 22:01:17 +0000
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zIK/Ljo2krYMiTOYmgV8ZuGPWRCZfZlq9NsN5qw6P6tIfrJz32dFEbK3upBVW5ON3xdWNBf1ONgCkZTokWPe9A==", "usuario"=>{"cpf"=>"99999999999", "nome"=>"sojeriojew", "email"=>"POJNPMETPM", "nivel"=>"POPODMFGPOMDGPpomfpogmfg", "fone"=>"dpomgpodmgpodmg", "ramal"=>"pdomtpomdt", "orient"=>"dpomfgpodmg", "coorient"=>"pomsfdpomdfg"}, "commit"=>"Criar Usuário"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('POJNPMETPM') LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered usuarios/_form.html.erb (10.2ms)
+  Rendered usuarios/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 327ms (Views: 310.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/usuarios" for 150.161.2.202 at 2015-12-13 22:01:40 +0000
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fK25GV4pxGAETs7Q27FDU80zSQOztWoZ3Hs/MHekRk34UbREu3gTx7pwR9gU76y486tGJz09y6sqMaY+Sv2nEg==", "usuario"=>{"cpf"=>"99999999999", "nome"=>"sojeriojew", "email"=>"POJNPMETPM@sdnjon", "nivel"=>"POPODMFGPOMDGPpomfpogmfg", "fone"=>"dpomgpodmgpodmg", "ramal"=>"pdomtpomdt", "orient"=>"dpomfgpodmg", "coorient"=>"pomsfdpomdfg"}, "commit"=>"Criar Usuário"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('POJNPMETPM@sdnjon') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered usuarios/_form.html.erb (7.6ms)
+  Rendered usuarios/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 369ms (Views: 354.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/usuarios" for 150.161.2.202 at 2015-12-13 22:01:48 +0000
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gnZ1l4I+tqlLqUXl78V+vO0e24thc7PGgfXiJ0aUDOkGinjKZ29hDvWXzO0gm5FX04bUr+/7EnR3v3spe83ttg==", "usuario"=>{"cpf"=>"99999999999", "nome"=>"sojeriojew", "email"=>"POJNPMETPM@sdnjon.com", "nivel"=>"POPODMFGPOMDGPpomfpogmfg", "fone"=>"dpomgpodmgpodmg", "ramal"=>"pdomtpomdt", "orient"=>"dpomfgpodmg", "coorient"=>"pomsfdpomdfg"}, "commit"=>"Criar Usuário"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('POJNPMETPM@sdnjon.com') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+RangeError (99999999999 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/usuarios_controller.rb:30:in `block in create'
+  app/controllers/usuarios_controller.rb:29:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (11.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (104.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeIntegerLimitInUsuarios (20151213221441)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeIntegerLimitInUsuarios (20151213221441)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeIntegerLimitInUsuarios (20151213221441)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.7ms)[0m  [1mCREATE TEMPORARY TABLE "ausuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cpf" integer, "nome" varchar, "email" varchar, "nivel" varchar, "fone" varchar, "ramal" integer, "orient" varchar, "coorient" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX "tindex_ausuarios_on_email" ON "ausuarios" ("email")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "ausuarios" ("id","cpf","nome","email","nivel","fone","ramal","orient","coorient","created_at","updated_at","password_digest") VALUES (2, 11, 'Kennedy Lins', 'kbsl@cin.ufpe.br', 'Mestrado', '31828849', 86266682, 'Zeque ', 'Bernadete', '2015-12-13 19:49:40.526155', '2015-12-13 19:49:40.526155', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "ausuarios" ("id","cpf","nome","email","nivel","fone","ramal","orient","coorient","created_at","updated_at","password_digest") VALUES (3, 1111, 'Paulo de tarso', 'ppppp@cin.ufpe.br', 'Doutorado', '4848655', 4874564, 'Zeque', 'Carla', '2015-12-13 19:52:30.735161', '2015-12-13 19:52:30.735161', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "ausuarios" ("id","cpf","nome","email","nivel","fone","ramal","orient","coorient","created_at","updated_at","password_digest") VALUES (4, 99999999, 'Fulano de Tal', 'fulano@detal.com', 'DO', '999999999', 888888888, 'siuhaeriouhar', 'iphdfoigpodinpo drpkl', '2015-12-13 22:00:24.638752', '2015-12-13 22:00:24.638752', NULL)
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "usuarios"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cpf" integer(8), "nome" varchar, "email" varchar, "nivel" varchar, "fone" varchar, "ramal" integer, "orient" varchar, "coorient" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausuarios_on_email' AND type='index'
+[0m
+  [1m[35m (3.2ms)[0m  CREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "ausuarios"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "usuarios" ("id","cpf","nome","email","nivel","fone","ramal","orient","coorient","created_at","updated_at","password_digest") VALUES (2, 11, 'Kennedy Lins', 'kbsl@cin.ufpe.br', 'Mestrado', '31828849', 86266682, 'Zeque ', 'Bernadete', '2015-12-13 19:49:40.526155', '2015-12-13 19:49:40.526155', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "usuarios" ("id","cpf","nome","email","nivel","fone","ramal","orient","coorient","created_at","updated_at","password_digest") VALUES (3, 1111, 'Paulo de tarso', 'ppppp@cin.ufpe.br', 'Doutorado', '4848655', 4874564, 'Zeque', 'Carla', '2015-12-13 19:52:30.735161', '2015-12-13 19:52:30.735161', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "usuarios" ("id","cpf","nome","email","nivel","fone","ramal","orient","coorient","created_at","updated_at","password_digest") VALUES (4, 99999999, 'Fulano de Tal', 'fulano@detal.com', 'DO', '999999999', 888888888, 'siuhaeriouhar', 'iphdfoigpodinpo drpkl', '2015-12-13 22:00:24.638752', '2015-12-13 22:00:24.638752', NULL)
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "ausuarios"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151213221441"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-13 22:31:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (7.1ms)
+Completed 200 OK in 61ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 150.161.2.202 at 2015-12-13 22:31:25 +0000
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 560ms (Views: 540.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/usuarios/new" for 150.161.2.202 at 2015-12-13 22:31:29 +0000
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/_form.html.erb (53.4ms)
+  Rendered usuarios/new.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 382ms (Views: 379.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 150.161.2.202 at 2015-12-13 22:31:47 +0000
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DCTNEpF1W4wk5O1lelVH+3u1uoUXQWRDYNQjOsuJh8OI2MBPdCSMK5raZG21C6gQRS21oZnJxfGWnro09tBmnA==", "usuario"=>{"cpf"=>"99999999999", "nome"=>"oisroin", "email"=>"oiboib@er.com", "nivel"=>"iob", "fone"=>"lknkln", "ramal"=>"obobo", "orient"=>"boibo", "coorient"=>"iboib"}, "commit"=>"Criar Usuário"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.3ms)[0m  SELECT  1 AS one FROM "usuarios" WHERE LOWER("usuarios"."email") = LOWER('oiboib@er.com') LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "nome", "email", "nivel", "fone", "ramal", "orient", "coorient", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", 99999999999], ["nome", "oisroin"], ["email", "oiboib@er.com"], ["nivel", "iob"], ["fone", "lknkln"], ["ramal", 0], ["orient", "boibo"], ["coorient", "iboib"], ["created_at", "2015-12-13 22:31:47.769737"], ["updated_at", "2015-12-13 22:31:47.769737"]]
+  [1m[35m (10.8ms)[0m  commit transaction
+Redirected to https://app-2sbe-ptnmr.c9users.io/usuarios/5
+Completed 302 Found in 61ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/usuarios/5" for 150.161.2.202 at 2015-12-13 22:31:47 +0000
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered usuarios/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 390ms (Views: 365.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/usuarios" for 150.161.2.202 at 2015-12-13 22:31:53 +0000
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 437ms (Views: 435.4ms | ActiveRecord: 0.2ms)

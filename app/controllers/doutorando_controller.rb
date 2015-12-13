@@ -1,2 +1,0 @@
-class DoutorandoController < ApplicationController
-end

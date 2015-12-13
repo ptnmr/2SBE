@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 
+# Encriptação da senha do usuário
+gem 'bcrypt',               '3.1.7'
+
 # Melhor para layout - Kennedy
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
@@ -11,7 +14,7 @@ gem 'devise'
 gem 'omniauth'
 
 # Para o layout
-gem 'bootstrap-sass', '~> 3.2.0'
+# gem 'bootstrap-sass', '~> 3.2.0'
 
 group :production do
   # Para o Heroku

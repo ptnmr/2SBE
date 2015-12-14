@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+
 # Encriptação da senha do usuário
 gem 'bcrypt',               '3.1.7'
 

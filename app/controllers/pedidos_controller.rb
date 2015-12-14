@@ -5,7 +5,7 @@ class PedidosController < ApplicationController
   # GET /pedidos
   # GET /pedidos.json
   def index
-    @pedidos = Pedido.all
+    @pedidos = current_membro.pedidos
   end
 
   # GET /pedidos/1
@@ -26,10 +26,10 @@ class PedidosController < ApplicationController
   # POST /pedidos.json
   def create
     @pedido = Pedido.new(pedido_params)
-
+    @pedido.membro_id = current_membro.id  
     respond_to do |format|
       if @pedido.save
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully created.' }
+        format.html { redirect_to @pedido, notice: 'Solicitação criada com sucesso.' }
         format.json { render :show, status: :created, location: @pedido }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class PedidosController < ApplicationController
   def update
     respond_to do |format|
       if @pedido.update(pedido_params)
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully updated.' }
+        format.html { redirect_to @pedido, notice: 'Pedido Atualizado com Sucesso' }
         format.json { render :show, status: :ok, location: @pedido }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class PedidosController < ApplicationController
   def destroy
     @pedido.destroy
     respond_to do |format|
-      format.html { redirect_to pedidos_url, notice: 'Pedido was successfully destroyed.' }
+      format.html { redirect_to pedidos_url, notice: 'Pedido apagado com successo.' }
       format.json { head :no_content }
     end
   end
@@ -65,7 +65,8 @@ class PedidosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pedido
-      @pedido = Pedido.find(params[:id])
+      @pedido = current_membro.pedidos.find(params[:id])
+      #@pedido  = Pedido.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

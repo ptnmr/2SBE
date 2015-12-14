@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20151213221502) do
+ActiveRecord::Schema.define(version: 20151214200735) do
 
   create_table "membros", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -31,9 +30,6 @@ ActiveRecord::Schema.define(version: 20151213221502) do
 
   add_index "membros", ["email"], name: "index_membros_on_email", unique: true
   add_index "membros", ["reset_password_token"], name: "index_membros_on_reset_password_token", unique: true
-=======
-ActiveRecord::Schema.define(version: 20151213221441) do
->>>>>>> 26d2c158ce27358f0c2ccf829c78b1d54bad6342
 
   create_table "pedidos", force: :cascade do |t|
     t.integer  "cpf"
@@ -101,6 +97,7 @@ ActiveRecord::Schema.define(version: 20151213221441) do
     t.integer  "usuario_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "membro_id"
   end
 
   add_index "pedidos", ["usuario_id"], name: "index_pedidos_on_usuario_id"

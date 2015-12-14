@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
  
- get 'welcome/index'
-
- root 'welcome#index'
  
-  devise_for :membros
+devise_for :membros  
+devise_scope :membro do
+  authenticated :membro do
+    root :to => 'pedidos#index', as: :authenticated_root
+  end
+  unauthenticated :membro do
+    root :to => 'devise/sessions#new', as: :unauthenticated_root
+  end
+end
+
   resources :pedidos
   resources :usuarios
   # The priority is based upon order of creation: first created -> highest priority.

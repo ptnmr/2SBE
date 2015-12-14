@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151214200735) do
+=======
+
+ActiveRecord::Schema.define(version: 20151213221502) do
+>>>>>>> 0f5d81d180a70762c624f7c5d2f7e980bbd9eed5
 
   create_table "membros", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +35,12 @@ ActiveRecord::Schema.define(version: 20151214200735) do
 
   add_index "membros", ["email"], name: "index_membros_on_email", unique: true
   add_index "membros", ["reset_password_token"], name: "index_membros_on_reset_password_token", unique: true
+<<<<<<< HEAD
+=======
+
+ActiveRecord::Schema.define(version: 20151213221441) do
+
+>>>>>>> 0f5d81d180a70762c624f7c5d2f7e980bbd9eed5
 
   create_table "pedidos", force: :cascade do |t|
     t.integer  "cpf"

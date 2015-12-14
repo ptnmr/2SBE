@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+# Gerar PDF
+gem 'prawn'
 
 # Encriptação da senha do usuário
 gem 'bcrypt',               '3.1.7'

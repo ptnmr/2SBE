@@ -11,6 +11,18 @@ class PedidosController < ApplicationController
   # GET /pedidos/1
   # GET /pedidos/1.json
   def show
+    #Iniciando implementação do pdf
+   # @pedidos = Pedido.find(params[:id])
+    #respond_to do |format|
+     # format.html
+      #format.pdf do
+       #  pdf = Prawn::Document.new
+        # pdf.text = "Olá"
+       # pdf = ReportPdf.new(@pedidos)
+        #send_data pdf.render, filename: 'report.pdf', type: 'application/pdf'
+      #end
+    #end
+    
   end
 
   # GET /pedidos/new

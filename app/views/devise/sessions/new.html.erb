@@ -1,4 +1,4 @@
-<h2>Bem-vindo ao Sistema de Solicitação de Banca Examinadora</h2>
+<!--<h2 align="center">Sistema de Solicitação de Banca Examinadora</h2> -->
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="login-block">
@@ -13,12 +13,12 @@
      <%= f.submit "Log in" %>
   </div>
 
-  
-  
 
   <div class="login-block">
    <%= render "devise/shared/links" %> 
   </div>
+  
+  
 <% end %>
 
 

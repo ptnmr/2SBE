@@ -1,5 +1,5 @@
 class Membro < ActiveRecord::Base
-  enum role: [:Aluno, :PPG]
+  enum role: [:aluno, :ppg]
   
   has_many :pedidos
   # Include default devise modules. Others available are:

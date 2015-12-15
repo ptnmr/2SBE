@@ -18036,3 +18036,287 @@ ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
 
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (107.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-14 23:45:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (134.3ms)
+Completed 200 OK in 10495ms (Views: 10469.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/controlmembros.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-12-14 23:45:45 +0000
+
+
+Started GET "/assets/controlmembros.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-12-14 23:45:45 +0000
+
+
+Started POST "/membros/sign_in" for 150.161.2.202 at 2015-12-14 23:46:53 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gh/h9JPCcUavU9EqgXZYoQBH6E1wJkVGcwrjXL5sitfvC3es80aQlMSHvJ5BZ8tNnm3/Li9Vi6nHhY0MVKLBSA==", "membro"=>{"email"=>"paulo@cin.ufpe.br", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mMembro Load (13.3ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."email" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["email", "paulo@cin.ufpe.br"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "membros" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "membros"."id" = ?  [["current_sign_in_at", "2015-12-14 23:46:53.300256"], ["sign_in_count", 2], ["updated_at", "2015-12-14 23:46:53.301874"], ["id", 2]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://app-2sbe-ptnmr.c9users.io/
+Completed 302 Found in 174ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-14 23:46:53 +0000
+  [1m[35mMembro Load (0.3ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["id", 2]]
+Processing by PedidosController#index as HTML
+  [1m[36mPedido Load (0.5ms)[0m  [1mSELECT "pedidos".* FROM "pedidos" WHERE "pedidos"."membro_id" = ?[0m  [["membro_id", 2]]
+  Rendered pedidos/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 578ms (Views: 509.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pedidos/new" for 150.161.2.202 at 2015-12-14 23:47:02 +0000
+Processing by PedidosController#new as HTML
+  [1m[35mMembro Load (0.2ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered pedidos/_form.html.erb (50.0ms)
+  Rendered pedidos/new.html.erb within layouts/application (57.2ms)
+Completed 200 OK in 633ms (Views: 561.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/pedidos" for 150.161.2.202 at 2015-12-14 23:58:23 +0000
+Processing by PedidosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0QALQy1G2tRsfVT1SuYdUE/MJHEQzOqBHu8PERdhJpKjT24AHky2pq+AqJk8kr8b3g6X0I1L11xiSzU0Lr67Q==", "pedido"=>{"cpf"=>"12345678910", "nome"=>"paulo", "email"=>"", "nivel"=>"", "fone"=>"", "ramal"=>"", "orient"=>"", "coorient"=>"", "dep_coor"=>"", "ies_coor"=>"", "area"=>"", "proj_assoc"=>"", "titulo"=>"", "resumo"=>"", "pal_chave"=>"", "sala"=>"", "data"=>"", "hora"=>"", "exam1"=>"", "exam1_mail"=>"", "exam1_dep"=>"", "exam1_ies"=>"", "exam1_pub"=>"", "exam2"=>"", "exam2_mail"=>"", "exam2_dep"=>"", "exam2_ies"=>"", "exam2_pub"=>"", "exam3"=>"", "exam3_mail"=>"", "exam3_dep"=>"", "exam3_ies"=>"", "exam3_pub"=>"", "exam4"=>"", "exam4_mail"=>"", "exam4_dep"=>"", "exam4_ies"=>"", "exam4_pub"=>"", "exam5"=>"", "exam5_mail"=>"", "exam5_dep"=>"", "exam5_ies"=>"", "exam5_pub"=>"", "exam6"=>"", "exam6_mail"=>"", "exam6_dep"=>"", "exam6_ies"=>"", "exam6_pub"=>"", "exam7"=>"", "exam7_mail"=>"", "exam7_dep"=>"", "exam7_ies"=>"", "exam7_pub"=>"", "sup_int"=>"", "sup_int_mail"=>"", "sup_int_pub"=>"", "sup_ext"=>"", "sup_ext_mail"=>"", "sup_ext_dep"=>"", "sup_ext_ies"=>"", "sup_ext_pub"=>"", "confirma"=>"", "usuario_id"=>""}, "commit"=>"Criar Pedido de banca"}
+  [1m[36mMembro Load (31.0ms)[0m  [1mSELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (34.3ms)[0m  begin transaction
+  [1m[36m (11.8ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 77.2ms)
+
+RangeError (12345678910 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/pedidos_controller.rb:31:in `block in create'
+  app/controllers/pedidos_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (16.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (8.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (138.7ms)
+
+
+Started POST "/pedidos" for 150.161.2.202 at 2015-12-15 00:01:42 +0000
+Processing by PedidosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0QALQy1G2tRsfVT1SuYdUE/MJHEQzOqBHu8PERdhJpKjT24AHky2pq+AqJk8kr8b3g6X0I1L11xiSzU0Lr67Q==", "pedido"=>{"cpf"=>"12345678910", "nome"=>"paulo", "email"=>"", "nivel"=>"", "fone"=>"", "ramal"=>"", "orient"=>"", "coorient"=>"", "dep_coor"=>"", "ies_coor"=>"", "area"=>"", "proj_assoc"=>"", "titulo"=>"", "resumo"=>"", "pal_chave"=>"", "sala"=>"", "data"=>"", "hora"=>"", "exam1"=>"", "exam1_mail"=>"", "exam1_dep"=>"", "exam1_ies"=>"", "exam1_pub"=>"", "exam2"=>"", "exam2_mail"=>"", "exam2_dep"=>"", "exam2_ies"=>"", "exam2_pub"=>"", "exam3"=>"", "exam3_mail"=>"", "exam3_dep"=>"", "exam3_ies"=>"", "exam3_pub"=>"", "exam4"=>"", "exam4_mail"=>"", "exam4_dep"=>"", "exam4_ies"=>"", "exam4_pub"=>"", "exam5"=>"", "exam5_mail"=>"", "exam5_dep"=>"", "exam5_ies"=>"", "exam5_pub"=>"", "exam6"=>"", "exam6_mail"=>"", "exam6_dep"=>"", "exam6_ies"=>"", "exam6_pub"=>"", "exam7"=>"", "exam7_mail"=>"", "exam7_dep"=>"", "exam7_ies"=>"", "exam7_pub"=>"", "sup_int"=>"", "sup_int_mail"=>"", "sup_int_pub"=>"", "sup_ext"=>"", "sup_ext_mail"=>"", "sup_ext_dep"=>"", "sup_ext_ies"=>"", "sup_ext_pub"=>"", "confirma"=>"", "usuario_id"=>""}, "commit"=>"Criar Pedido de banca"}
+  [1m[35mMembro Load (0.5ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 11.7ms)
+
+RangeError (12345678910 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/pedidos_controller.rb:31:in `block in create'
+  app/controllers/pedidos_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (15.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (10.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (11.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (140.8ms)
+
+
+Started POST "/pedidos" for 150.161.2.202 at 2015-12-15 00:02:50 +0000
+Processing by PedidosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0QALQy1G2tRsfVT1SuYdUE/MJHEQzOqBHu8PERdhJpKjT24AHky2pq+AqJk8kr8b3g6X0I1L11xiSzU0Lr67Q==", "pedido"=>{"cpf"=>"12345678910", "nome"=>"paulo", "email"=>"", "nivel"=>"", "fone"=>"", "ramal"=>"", "orient"=>"", "coorient"=>"", "dep_coor"=>"", "ies_coor"=>"", "area"=>"", "proj_assoc"=>"", "titulo"=>"", "resumo"=>"", "pal_chave"=>"", "sala"=>"", "data"=>"", "hora"=>"", "exam1"=>"", "exam1_mail"=>"", "exam1_dep"=>"", "exam1_ies"=>"", "exam1_pub"=>"", "exam2"=>"", "exam2_mail"=>"", "exam2_dep"=>"", "exam2_ies"=>"", "exam2_pub"=>"", "exam3"=>"", "exam3_mail"=>"", "exam3_dep"=>"", "exam3_ies"=>"", "exam3_pub"=>"", "exam4"=>"", "exam4_mail"=>"", "exam4_dep"=>"", "exam4_ies"=>"", "exam4_pub"=>"", "exam5"=>"", "exam5_mail"=>"", "exam5_dep"=>"", "exam5_ies"=>"", "exam5_pub"=>"", "exam6"=>"", "exam6_mail"=>"", "exam6_dep"=>"", "exam6_ies"=>"", "exam6_pub"=>"", "exam7"=>"", "exam7_mail"=>"", "exam7_dep"=>"", "exam7_ies"=>"", "exam7_pub"=>"", "sup_int"=>"", "sup_int_mail"=>"", "sup_int_pub"=>"", "sup_ext"=>"", "sup_ext_mail"=>"", "sup_ext_dep"=>"", "sup_ext_ies"=>"", "sup_ext_pub"=>"", "confirma"=>"", "usuario_id"=>""}, "commit"=>"Criar Pedido de banca"}
+  [1m[36mMembro Load (0.4ms)[0m  [1mSELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 4.6ms)
+
+RangeError (12345678910 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/pedidos_controller.rb:31:in `block in create'
+  app/controllers/pedidos_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (16.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (6.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (107.7ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-15 00:03:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mMembro Load (0.2ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["id", 2]]
+Processing by PedidosController#index as HTML
+  [1m[36mPedido Load (0.3ms)[0m  [1mSELECT "pedidos".* FROM "pedidos" WHERE "pedidos"."membro_id" = ?[0m  [["membro_id", 2]]
+  Rendered pedidos/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 759ms (Views: 731.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-15 00:03:54 +0000
+  [1m[35mMembro Load (0.2ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["id", 2]]
+Processing by PedidosController#index as HTML
+  [1m[36mPedido Load (0.1ms)[0m  [1mSELECT "pedidos".* FROM "pedidos" WHERE "pedidos"."membro_id" = ?[0m  [["membro_id", 2]]
+  Rendered pedidos/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 191ms (Views: 190.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/membros/sign_out" for 150.161.2.202 at 2015-12-15 00:03:58 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l6ka2LrvPeIcb8fDbOA7mbG2zAcUoIP/Cs1SLEi8vMRuYCdNtiMUU9dgMDLdOekQn/HGyZLWnwh/P8LE3FvCsw=="}
+  [1m[35mMembro Load (0.1ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://app-2sbe-ptnmr.c9users.io/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-15 00:03:58 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 239ms (Views: 236.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/membros/sign_in" for 150.161.2.202 at 2015-12-15 00:04:14 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CyFMemjF6TBK85WS7iGbrL9dHL2VgfRiY3wFPQ/6bbs99ZBWIX+IAxL0lAHUV4iZvIylgABPSZgA+zBdZUtS2w==", "membro"=>{"email"=>"paulo@cin.ufpe.br", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMembro Load (0.3ms)[0m  [1mSELECT  "membros".* FROM "membros" WHERE "membros"."email" = ?  ORDER BY "membros"."id" ASC LIMIT 1[0m  [["email", "paulo@cin.ufpe.br"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "membros" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "membros"."id" = ?[0m  [["last_sign_in_at", "2015-12-14 23:46:53.300256"], ["current_sign_in_at", "2015-12-15 00:04:14.327813"], ["sign_in_count", 3], ["updated_at", "2015-12-15 00:04:14.329506"], ["id", 2]]
+  [1m[35m (11.0ms)[0m  commit transaction
+Redirected to https://app-2sbe-ptnmr.c9users.io/
+Completed 302 Found in 112ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-15 00:04:14 +0000
+  [1m[36mMembro Load (0.4ms)[0m  [1mSELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1[0m  [["id", 2]]
+Processing by PedidosController#index as HTML
+  [1m[35mPedido Load (0.1ms)[0m  SELECT "pedidos".* FROM "pedidos" WHERE "pedidos"."membro_id" = ?  [["membro_id", 2]]
+  Rendered pedidos/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 229ms (Views: 228.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/pedidos/new" for 150.161.2.202 at 2015-12-15 00:04:18 +0000
+Processing by PedidosController#new as HTML
+  [1m[36mMembro Load (0.2ms)[0m  [1mSELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered pedidos/_form.html.erb (41.8ms)
+  Rendered pedidos/new.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 292ms (Views: 231.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/pedidos" for 150.161.2.202 at 2015-12-15 00:04:43 +0000
+Processing by PedidosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hUpNslcYQZ5Pn6sJNYzCaGOMVO9AFTe7VSvtPDIN0TnmKYAYeHiR6XYbaIg4+A8KRGNOaW2za9H8xXJQT0ziBQ==", "pedido"=>{"cpf"=>"12345678910", "nome"=>"Paulo de Tarso", "email"=>"", "nivel"=>"", "fone"=>"", "ramal"=>"", "orient"=>"", "coorient"=>"", "dep_coor"=>"", "ies_coor"=>"", "area"=>"", "proj_assoc"=>"", "titulo"=>"", "resumo"=>"", "pal_chave"=>"", "sala"=>"", "data"=>"", "hora"=>"", "exam1"=>"", "exam1_mail"=>"", "exam1_dep"=>"", "exam1_ies"=>"", "exam1_pub"=>"", "exam2"=>"", "exam2_mail"=>"", "exam2_dep"=>"", "exam2_ies"=>"", "exam2_pub"=>"", "exam3"=>"", "exam3_mail"=>"", "exam3_dep"=>"", "exam3_ies"=>"", "exam3_pub"=>"", "exam4"=>"", "exam4_mail"=>"", "exam4_dep"=>"", "exam4_ies"=>"", "exam4_pub"=>"", "exam5"=>"", "exam5_mail"=>"", "exam5_dep"=>"", "exam5_ies"=>"", "exam5_pub"=>"", "exam6"=>"", "exam6_mail"=>"", "exam6_dep"=>"", "exam6_ies"=>"", "exam6_pub"=>"", "exam7"=>"", "exam7_mail"=>"", "exam7_dep"=>"", "exam7_ies"=>"", "exam7_pub"=>"", "sup_int"=>"", "sup_int_mail"=>"", "sup_int_pub"=>"", "sup_ext"=>"", "sup_ext_mail"=>"", "sup_ext_dep"=>"", "sup_ext_ies"=>"", "sup_ext_pub"=>"", "confirma"=>"", "usuario_id"=>""}, "commit"=>"Criar Pedido de banca"}
+  [1m[35mMembro Load (0.2ms)[0m  SELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+RangeError (12345678910 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/controllers/pedidos_controller.rb:31:in `block in create'
+  app/controllers/pedidos_controller.rb:30:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (38.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+

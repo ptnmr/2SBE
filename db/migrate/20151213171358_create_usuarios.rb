@@ -1,7 +1,7 @@
 class CreateUsuarios < ActiveRecord::Migration
   def change
     create_table :usuarios do |t|
-      t.integer :cpf
+      t.integer :cpf,               limit: 8
       t.string :nome
       t.string :email
       t.string :nivel

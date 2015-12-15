@@ -1,7 +1,7 @@
 class MembroPolicy < ApplicationPolicy
   
   def index?
-    user.ppg?
+    membro.admin?
   end
   
   class Scope < Scope

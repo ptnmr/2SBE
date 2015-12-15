@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sistema de Solicitações de Banca Examinadora - 2SBE</h1>
+
+<% if policy(@dashboard).index? %>
+    <%= render partial: "ppg_index" %>
+<% else %>
+    <%= render partial: "aluno_index" %>
+<% end %>

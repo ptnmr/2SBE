@@ -2,11 +2,29 @@ class PedidosController < ApplicationController
   before_action :set_pedido, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_membro!
 
+
   # GET /pedidos
   # GET /pedidos.json
-  def index
-    @pedidos = current_membro.pedidos
-  end
+
+
+
+#  def index
+#    if policy(@membros).index?
+#      @pedidos = Pedido.all
+#    else
+#      @pedidos = current_membro.pedidos
+#    end
+#  end
+
+#   end
+#  end
+
+
+
+def index
+  @pedidos = Pedido.all
+end
+
 
   # GET /pedidos/1
   # GET /pedidos/1.json
@@ -22,6 +40,8 @@ class PedidosController < ApplicationController
   def edit
   end
 
+
+
   # POST /pedidos
   # POST /pedidos.json
   def create
@@ -29,7 +49,7 @@ class PedidosController < ApplicationController
     @pedido.membro_id = current_membro.id  
     respond_to do |format|
       if @pedido.save
-        format.html { redirect_to @pedido, notice: 'Solicitação criada com sucesso.' }
+        format.html { redirect_to @pedido, notice: 'Solicitação salva com sucesso.' }
         format.json { render :show, status: :created, location: @pedido }
       else
         format.html { render :new }
@@ -43,7 +63,7 @@ class PedidosController < ApplicationController
   def update
     respond_to do |format|
       if @pedido.update(pedido_params)
-        format.html { redirect_to @pedido, notice: 'Pedido Atualizado com Sucesso' }
+        format.html { redirect_to @pedido, notice: 'Solicitação atualizada com sucesso' }
         format.json { render :show, status: :ok, location: @pedido }
       else
         format.html { render :edit }

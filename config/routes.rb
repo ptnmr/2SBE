@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
- 
- 
+
+
 devise_for :membros  
 devise_scope :membro do
   authenticated :membro do

@@ -1,5 +1,5 @@
-class ControlmembrosController < ApplicationController
-  def index
+# class ControlmembrosController < ApplicationController
+#   def index
     
-  end
-end
+#   end
+# end

@@ -2,7 +2,7 @@
   activerecord:
     models:
       usuario: Usuário
-      pedido: Pedido de banca
+      pedido: Solicitação de banca
     attributes:
       usuario:
         id :        "Código"
@@ -20,7 +20,7 @@
       pedido:
         id :        "Código"
         cpf:        "CPF"
-        email:  "E-mail do aluno"
+        email:  "E-mail"
         fone:   "Telefone 1"
         ramal:  "Telfone 2"
         orient: "Nome do orientador"

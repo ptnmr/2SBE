@@ -133,6 +133,8 @@ GEM
       pdf-core (~> 0.6.0)
       ttfunk (~> 1.4.0)
     puma (2.15.3)
+    pundit (1.0.1)
+      activesupport (>= 3.0.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -238,6 +240,7 @@ DEPENDENCIES
   pg (= 0.17.1)
   prawn
   puma
+  pundit
   rails (= 4.2.2)
   rails_12factor (= 0.0.2)
   sass-rails (= 5.0.2)

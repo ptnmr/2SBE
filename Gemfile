@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-# Controlar acesso
+# Controlar acesso e permissões
 gem 'pundit'
 
 

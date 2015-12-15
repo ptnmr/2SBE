@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 
+# Controlar acesso e permissões
+gem 'pundit'
+
+
 # Gerar PDF
 gem 'prawn'
 

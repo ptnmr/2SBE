@@ -22716,6 +22716,7 @@ ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
 
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (92.9ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 150.161.2.202 at 2015-12-15 03:37:30 +0000
@@ -26507,3 +26508,110 @@ ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
 
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (85.3ms)
+=======
+  [1m[36mMembro Load (0.2ms)[0m  [1mSELECT  "membros".* FROM "membros"  ORDER BY "membros"."id" DESC LIMIT 1[0m
+  [1m[35mMembro Load (0.6ms)[0m  SELECT "membros".* FROM "membros"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRoleToMembro (20151215011812)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "membros" ADD "role" integer DEFAULT 0[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151215011812"]]
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_membros_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_membros_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pedidos_on_usuario_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-15 03:47:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (102.8ms)
+Completed 200 OK in 2500ms (Views: 2485.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/login.self-69d48d10b3c6abde7118f5857e85d24284d6a590c5b9633b3d7a918a9ffdb5d9.css?body=1" for 150.161.2.202 at 2015-12-15 03:47:24 +0000
+
+
+Started GET "/assets/application.self-c89f83d459b096bb7ee91797cd54a200612a9ca96b72cb42a8c978c7ef008f3f.css?body=1" for 150.161.2.202 at 2015-12-15 03:47:24 +0000
+
+
+Started GET "/membros/sign_up" for 150.161.2.202 at 2015-12-15 03:47:35 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 420ms (Views: 418.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/membros" for 150.161.2.202 at 2015-12-15 03:47:48 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F1DGIOY17745pr9JKZsJeQ1DC/ggq4j96pI1b17SQmYSb8XIhhLAilZX/qaYMHE1wRhdKDnGq45qOPgVlCvwVQ==", "membro"=>{"email"=>"posgraduacao@cin.ufpe.br", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mMembro Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "membros" WHERE "membros"."email" = 'posgraduacao@cin.ufpe.br' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "membros" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "posgraduacao@cin.ufpe.br"], ["encrypted_password", "$2a$10$HmPiJqKRCYXypfMs7cYv9Or/1nt4QT1LLsv0Kg57eJfeYP4GdtOqG"], ["created_at", "2015-12-15 03:47:48.203949"], ["updated_at", "2015-12-15 03:47:48.203949"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "membros" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "membros"."id" = ?[0m  [["last_sign_in_at", "2015-12-15 03:47:48.216858"], ["current_sign_in_at", "2015-12-15 03:47:48.216858"], ["last_sign_in_ip", "150.161.2.202"], ["current_sign_in_ip", "150.161.2.202"], ["sign_in_count", 1], ["updated_at", "2015-12-15 03:47:48.217958"], ["id", 5]]
+  [1m[35m (7.0ms)[0m  commit transaction
+Redirected to https://app-2sbe-ptnmr.c9users.io/
+Completed 302 Found in 192ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-15 03:47:48 +0000
+  [1m[36mMembro Load (0.4ms)[0m  [1mSELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1[0m  [["id", 5]]
+Processing by PedidosController#index as HTML
+  [1m[35mPedido Load (0.4ms)[0m  SELECT "pedidos".* FROM "pedidos" WHERE "pedidos"."membro_id" = ?  [["membro_id", 5]]
+  Rendered pedidos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 507ms (Views: 445.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/membros/sign_out" for 150.161.2.202 at 2015-12-15 03:48:02 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QNCa4My63LtWt8G4RH5UCgmp0vbKfbK8CDmwzxU5k81F75kIrJ3zjzlGgFf11SxGxfKEJtMQkc+Ik32138Ah/g=="}
+  [1m[36mMembro Load (0.2ms)[0m  [1mSELECT  "membros".* FROM "membros" WHERE "membros"."id" = ?  ORDER BY "membros"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://app-2sbe-ptnmr.c9users.io/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-12-15 03:48:02 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 429ms (Views: 428.1ms | ActiveRecord: 0.0ms)
+  [1m[36mMembro Load (0.3ms)[0m  [1mSELECT  "membros".* FROM "membros"  ORDER BY "membros"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "membros" SET "role" = ?, "updated_at" = ? WHERE "membros"."id" = ?[0m  [["role", 1], ["updated_at", "2015-12-15 03:48:39.174750"], ["id", 5]]
+  [1m[35m (13.7ms)[0m  commit transaction
+>>>>>>> 53ecdeb7e796eed31f9d8e02e9bd2148d8e91b6c
